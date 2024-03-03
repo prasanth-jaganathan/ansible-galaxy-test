@@ -1,0 +1,20 @@
+---
+    - name: install httpd
+      package:
+        name: ["httpd"]
+        state: installed
+      register: install_httpd
+      tags:
+        - install
+
+
+    - template:
+        src: index.html.j2
+        dest: /var/www/html/index.html
+      notify:
+        - "Restart Apache"     
+
+    - debug:
+        msg: "{{test_var}}" 
+
+

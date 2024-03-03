@@ -1,0 +1,4 @@
+---
+# vars file for apache-role
+#
+test_var: "{{test}}"

@@ -1,0 +1,4 @@
+---
+# tasks file for apache-role
+#
+- include_tasks: httpd.yaml
